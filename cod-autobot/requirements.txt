@@ -1,0 +1,14 @@
+# CoD AutoBot Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# GUI Framework
+PyQt5>=5.15.0
+
+# Screen capture and image detection
+opencv-python>=4.8.0
+Pillow>=10.0.0
+numpy>=1.24.0
+
+# Optional: OCR for reading discount percentages in Goblin Market
+# pytesseract>=0.3.10
+# Install Tesseract OCR engine separately: https://github.com/UB-Mannheim/tesseract/wiki

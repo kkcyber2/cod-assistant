@@ -1,0 +1,60 @@
+{
+  "_comment": "CoD AutoBot Configuration — edit here or use the GUI",
+
+  "adb_host": "127.0.0.1",
+  "adb_port": 5555,
+  "templates_dir": "templates",
+
+  "click_delay": 0.35,
+  "random_offset": 6,
+  "match_threshold": 0.85,
+  "anti_ban": true,
+  "night_mode": false,
+  "night_start_hour": 0,
+  "night_end_hour": 6,
+  "auto_reconnect": true,
+  "stop_at_power": 0,
+
+  "enable_gather": true,
+  "gather_marches": 5,
+  "gather_mode": "smart",
+  "gather_min_level": 3,
+  "gather_alliance_only": true,
+  "gather_single_commander": true,
+  "gather_mana": true,
+
+  "enable_fight": true,
+  "fight_target": "darkling_legion",
+  "fight_min_level": 8,
+  "fight_max_level": 20,
+  "fight_auto_heal": true,
+  "fight_max_loss_pct": 15,
+  "fight_prestige_mode": true,
+  "fight_collect_keys": true,
+
+  "enable_claim": true,
+  "claim_daily_quests": true,
+  "claim_alliance_rss": true,
+  "claim_alliance_gifts": true,
+  "claim_alliance_helps": true,
+  "claim_membership": true,
+  "claim_membership_shop": true,
+  "claim_titan_chest": true,
+  "claim_mail": true,
+  "claim_interval_mins": 30,
+
+  "enable_research": true,
+  "research_focus": "economy_first",
+  "research_second_queue": true,
+  "research_wait_helps": true,
+
+  "enable_build": true,
+  "build_mode": "priority_list",
+  "build_wait_helps": true,
+  "build_instant_college": true,
+
+  "enable_goblin": true,
+  "goblin_free_refresh_only": true,
+
+  "starting_power": 0
+}
