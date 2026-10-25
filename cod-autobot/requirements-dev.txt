@@ -1,0 +1,4 @@
+# Test-only dependencies. The bot itself needs ADB + BlueStacks;
+# these let the pure logic be tested without either.
+pytest==8.3.4
+numpy>=1.24

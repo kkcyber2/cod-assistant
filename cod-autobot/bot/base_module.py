@@ -37,8 +37,18 @@ class BotModule:
     # ─────────────────────────── HELPERS ─────────────────────────────
 
     def wait(self, seconds: float, jitter: float = 0.2):
-        """Sleep with optional random jitter for human-like timing."""
-        actual = seconds + random.uniform(-jitter, jitter)
+        """Sleep for roughly `seconds`, with bounded random jitter.
+
+        Jitter is capped at a fraction of the delay and never negative on the
+        low side: an absolute jitter made a 0.1s wait as long as 1.6s when the
+        caller passed a large value, which stalled the whole loop, and a jitter
+        bigger than the delay could push the sleep below zero.
+        """
+        if seconds <= 0:
+            time.sleep(0.05)
+            return
+        spread = min(abs(jitter), seconds * 0.5)
+        actual = seconds + random.uniform(-spread, spread)
         time.sleep(max(0.05, actual))
 
     def tap_if_found(self, screen_img, template_name: str,
